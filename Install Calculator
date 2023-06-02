@@ -1,0 +1,14 @@
+Abrir Powershell como admin e correr o seguinte:
+
+
+$calc = Get-AppxPackage -allusers *windowscalculator* | select PackageFullName
+$calculadora = $calc.PackageFullName 
+$caminho = "C:\Program Files\WindowsApps\$calculadora\appxmanifest.xml" 
+Add-AppxPackage -register $caminho -DisableDevelopmentMode
+Write-Output "Correr comando como user:" ('Add-AppxPackage -register "C:\Program Files\WindowsApps\'+ $calculadora +'\appxmanifest.xml" -DisableDevelopmentMode')
+
+
+
+
+
+Copiar o resultado do Output final (o comando completo) e correr no powershell como utilizador.
