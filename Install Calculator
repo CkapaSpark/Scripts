@@ -12,3 +12,12 @@ Write-Output "Correr comando como user:" ('Add-AppxPackage -register "C:\Program
 
 
 Copiar o resultado do Output final (o comando completo) e correr no powershell como utilizador.
+
+Exemplo:
+
+PS C:\WINDOWS\system32> Write-Output "Correr comando como user:" ('Add-AppxPackage -register "C:\Program Files\WindowsApps\'+ $calculadora +'\appxmanifest.xml" -DisableDevelopmentMode')                                                                                      Correr comando como user:
+Add-AppxPackage -register "C:\Program Files\WindowsApps\Microsoft.WindowsCalculator_11.2210.0.0_x64__8wekyb3d8bbwe\appxmanifest.xml" -DisableDevelopmentMode
+PS C:\WINDOWS\system32>
+
+Neste carro correr : 
+Add-AppxPackage -register "C:\Program Files\WindowsApps\Microsoft.WindowsCalculator_11.2210.0.0_x64__8wekyb3d8bbwe\appxmanifest.xml" -DisableDevelopmentMode
